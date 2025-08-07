@@ -124,7 +124,7 @@ public class StatisticsTestSuite {
 
 
     @Test
-    void testCalculateAdvStatisticsWhenCommentMoreThanPosts() {
+    void testCalculateAdvStatisticsWhenCommentsMoreThanPosts() {
         StatisticsCounter counter = new StatisticsCounter();
         when(statisticsMock.usersNames()).thenReturn(Arrays.asList("User1", "User2", "User3", "User4", "User5"));
         when(statisticsMock.postsCount()).thenReturn(15);
