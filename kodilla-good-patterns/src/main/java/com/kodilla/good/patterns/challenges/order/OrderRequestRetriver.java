@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class OrderRequestRetriver {
 
-    public OrderRequest retrieve(){
+    public OrderRequest retrieve() {
 
         User user = new User("Marta", "Gładysz", "marta1234");
         Product product = new Product("PEDIGREE DentaStix", BigDecimal.valueOf(69.98));

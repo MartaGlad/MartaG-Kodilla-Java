@@ -6,7 +6,7 @@ public class ProductOrderRepository implements OrderRepository {
 
     @Override
     public void createOrder(User user, Product product, LocalDateTime orderDateTime) {
-        System.out.println("\nOrder has been created in database");
+        System.out.println("\nOrder has been created in database.");
 
     }
 }

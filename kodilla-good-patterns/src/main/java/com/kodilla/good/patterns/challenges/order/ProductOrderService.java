@@ -8,7 +8,7 @@ public class ProductOrderService implements OrderService {
     @Override
     public boolean order(User user, Product product, LocalDateTime orderDateTime) {
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
         System.out.println("\nOrdering product: "+product.getName()+
                 " by user: "+user.getName()+" "+user.getSurname()+
