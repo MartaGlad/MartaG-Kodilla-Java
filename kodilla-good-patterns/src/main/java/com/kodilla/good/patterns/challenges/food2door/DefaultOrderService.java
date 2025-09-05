@@ -6,8 +6,8 @@ import java.time.format.DateTimeFormatter;
 public class DefaultOrderService implements OrderService {
 
     @Override
-    public boolean order(Customer customer, Provider provider,
-                         Product product, int quantity, LocalDateTime orderDateTime) {
+    public boolean order(final Customer customer, final Provider provider,
+                         final Product product, final int quantity, final LocalDateTime orderDateTime) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 

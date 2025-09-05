@@ -14,9 +14,9 @@ public class Provider implements OrderProcessorLogic {
     private OrderRepository orderRepository;
     private InformationService informationService;
 
-    public Provider(String name, String email, String phone, String address,
-                    List<Product> products, OrderService orderService,
-                    OrderRepository orderRepository, InformationService informationService) {
+    public Provider(final String name, final String email, final String phone, final String address,
+                    List<Product> products, final OrderService orderService,
+                    final OrderRepository orderRepository, final InformationService informationService) {
 
         this.name = name;
         this.email = email;
@@ -30,7 +30,7 @@ public class Provider implements OrderProcessorLogic {
     }
 
     @Override
-    public OrderDTO process(OrderRequest orderRequest) {
+    public OrderDTO process(final OrderRequest orderRequest) {
 
         boolean isOrdered = orderService.order(orderRequest.getCustomer(), orderRequest.getProvider(),
                 orderRequest.getProduct(), orderRequest.getQuantity(), orderRequest.getOrderDateTime());

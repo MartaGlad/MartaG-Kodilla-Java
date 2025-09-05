@@ -7,7 +7,7 @@ public class OrderRequest {
     private Product product;
     private LocalDateTime orderDateTime;
 
-    public OrderRequest(User user, Product product, LocalDateTime orderDateTime) {
+    public OrderRequest(final User user, final Product product, final LocalDateTime orderDateTime) {
         this.user = user;
         this.product = product;
         this.orderDateTime = orderDateTime;

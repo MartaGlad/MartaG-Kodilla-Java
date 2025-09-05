@@ -5,7 +5,7 @@ public class OrderDTO {
     private Product product;
     private boolean isOrdered;
 
-    public OrderDTO(User user, Product product, boolean isOrdered) {
+    public OrderDTO(final User user, final Product product, final boolean isOrdered) {
         this.user = user;
         this.product = product;
         this.isOrdered = isOrdered;

@@ -9,8 +9,8 @@ public class OrderRequest {
     private int quantity;
     private LocalDateTime orderDateTime;
 
-    public OrderRequest(Customer customer, Provider provider,
-                        Product product, int quantity, LocalDateTime orderDateTime) {
+    public OrderRequest(final Customer customer, final Provider provider,
+                        final Product product, final int quantity, final LocalDateTime orderDateTime) {
 
         this.customer = customer;
         this.provider = provider;
