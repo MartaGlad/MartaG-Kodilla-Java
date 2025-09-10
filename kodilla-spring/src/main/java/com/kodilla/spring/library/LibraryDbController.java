@@ -3,7 +3,7 @@ package com.kodilla.spring.library;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+//@Repository  zakomentowane, gdy konfiguracja przy użyciu klasy konfiguracyjnej
 public final class LibraryDbController {
 
     public void saveData() {

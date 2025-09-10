@@ -6,23 +6,20 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+//@Service zakomentowane, gdy konfiguracja przy użyciu klasy konfiguracyjnej
 public final class Library {
+
     private final List<String> books = new ArrayList<>();
-    //private /*final*/ LibraryDbController libraryDbController; //jak jest final to nie może
-    // być bezparametrowy konstruktor
+    private LibraryDbController libraryDbController;
 
-    @Autowired
-    private LibraryDbController libraryDbController;//wstrzykiwanie zależności bezpośrednio do pola klasy
 
-    /*@Autowired
     public Library(final LibraryDbController libraryDbController) {
         this.libraryDbController = libraryDbController;
     }
 
-    public Library(){
+    public Library() {
 
-    }*/
+    }
 
     /*@Autowired
     public void setLibraryDbController(LibraryDbController libraryDbController) {
