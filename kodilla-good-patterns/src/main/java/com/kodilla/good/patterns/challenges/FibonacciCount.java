@@ -1,4 +1,4 @@
-package com.kodilla.spring;
+package com.kodilla.good.patterns.challenges;
 
 public class FibonacciCount {
     public long fibonacci(long n) {

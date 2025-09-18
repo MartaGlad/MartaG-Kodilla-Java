@@ -26,4 +26,11 @@ public final class SimpleProduct {
         return Objects.equals(productName, that.productName);
     }
 
+    @Override
+    public String toString() {
+        return "SimpleProduct{" +
+                "productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                '}';
+    }
 }

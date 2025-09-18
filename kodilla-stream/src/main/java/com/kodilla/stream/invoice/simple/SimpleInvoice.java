@@ -20,4 +20,10 @@ public final class SimpleInvoice {
                 .collect(Collectors.summingDouble(SimpleItem::getValue));
     }
 
+    @Override
+    public String toString() {
+        return "SimpleInvoice{" +
+                "items=" + items +
+                '}';
+    }
 }

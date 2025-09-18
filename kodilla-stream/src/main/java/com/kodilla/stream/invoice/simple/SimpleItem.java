@@ -20,4 +20,12 @@ public final class SimpleItem {
     public double getValue(){
         return product.getProductPrice() * quantity;
     }
+
+    @Override
+    public String toString() {
+        return "SimpleItem{" +
+                "product=" + product +
+                ", quantity=" + quantity +
+                '}';
+    }
 }
