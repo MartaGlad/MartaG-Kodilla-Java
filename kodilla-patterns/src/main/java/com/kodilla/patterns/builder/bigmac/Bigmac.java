@@ -16,7 +16,8 @@ public final class Bigmac {
         this.ingredients = new HashSet<>(ingredients);
     }
 
-    public static class BigmacBuilder {
+    public static class BigmacBuilder {//dostęp tylko do statycznych pól klasy zewnętrznej
+                                        //Można ją tworzyć bez tworzenia obiektu klasy zewnętrznej.
         private Bun bun;
         private int burgers;
         private Sauce sauce;

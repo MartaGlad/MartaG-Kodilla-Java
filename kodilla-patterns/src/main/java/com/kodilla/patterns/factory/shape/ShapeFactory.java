@@ -6,7 +6,7 @@ public final class ShapeFactory {
     public static final String RECTANGLE = "RECTANGLE";
 
     public final Shape makeShape(final String shapeClass) {
-        /*switch (shapeClass) {
+       /* switch (shapeClass) {
             case "CIRCLE":
                 return new Circle("The rounded circle ", 4.50);
             case "SQUARE":

@@ -72,8 +72,7 @@ public class DbManagerTestSuite {
         //When
         String sqlQuerry = """
                 select U.FIRSTNAME, U.LASTNAME, count(*) as POST_COUNT
-                from USERS U
-                join POSTS P on U.ID = P.USER_ID 
+                from USERS U join POSTS P on U.ID = P.USER_ID 
                 group by P.USER_ID
                 having POST_COUNT >= 2
                 """;

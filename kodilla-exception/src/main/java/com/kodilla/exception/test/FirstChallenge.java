@@ -21,13 +21,17 @@ public class FirstChallenge {
             System.out.println(result);
         }
 
-        System.out.println(firstChallenge.power(4, 1));
+        System.out.println(firstChallenge.power(5, 3));
     }
 
 
-    public long power(long base, long exponent) {
-        if ((base == 0) || (exponent == 0)) return 1;
-        else return base * power(base, exponent-1);
+    public int power(int base, int exp) {
+        if((base < 0) || (exp < 0)) {
+            throw new IllegalArgumentException("Negative arguments not supported!");
+        }
+        if (exp == 0) return 1;
+        if (base == 0) return 0;
+        else return base * power(base, exp-1);
 
     }
 
