@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class KodillaHibernateApplicationTests {
 
-	@Test /*sprawdza, czy można nawiązac połączenie z bd*/
+	@Test /* sprawdza, czy można nawiązac połączenie z bd */
 	void contextLoads() {
 	}
 
