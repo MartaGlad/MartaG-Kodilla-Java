@@ -1,11 +1,20 @@
 package com.kodilla.hibernate.manytomany;
 
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(
+       name = "Company.retrieveCompaniesNameStartsWith",
+       query = """
+       Select * from COMPANIES 
+       where substring(COMPANY_NAME, 1, 3) = :NAME_STARTS_WITH
+       """,
+       resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

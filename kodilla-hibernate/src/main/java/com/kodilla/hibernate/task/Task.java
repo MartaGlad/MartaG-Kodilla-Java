@@ -6,6 +6,33 @@ import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 
+@NamedQueries({ //na encjach (nazwach klas i zmiennych)
+    @NamedQuery(
+            name = "Task.retrieveLongTasks",
+            query = "from Task where duration > 10"
+    ),
+    @NamedQuery(
+            name = "Task.retrieveShortTasks",
+            query = "from Task where duration <= 10"
+    ),
+    @NamedQuery(
+            name = "Task.retrieveTasksWithDurationLongerThan",
+            query = "from Task where duration > :DURATION"
+    )
+})
+
+    @NamedNativeQuery( //na tabelach i kolumnach
+            name = "Task.retrieveTasksWithEnoughTime",
+            query = """
+            select * from TASKS
+            where datediff(date_add(CREATED, INTERVAL DURATION DAY), now()) > 5 
+            """,
+             /*suma daty utworzenia rekordu oraz czasu trwania zadania w dniach jest większa o co najmniej 5 dni od daty bieżącej*/
+            resultClass = Task.class
+)
+
+
+
 @Entity
 @Table(name = "TASKS")
 public final class Task {
