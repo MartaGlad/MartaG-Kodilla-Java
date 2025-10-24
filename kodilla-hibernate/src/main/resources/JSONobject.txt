@@ -1,0 +1,24 @@
+{
+"vehicleName": "Toyota Corolla",
+"vehicleMake": "Toyota",
+"carSeats": [
+    {
+      "material": "leather",
+      "color": "pink"
+    },
+    {
+       "material": "polyester",
+       "color": "green"
+    },
+    {
+        "material": "leather",
+        "color": "blue"
+    },
+    {
+        "material": "polyester",
+        "color": "pink"
+    }
+],
+
+"engineSize": 1.2
+}
