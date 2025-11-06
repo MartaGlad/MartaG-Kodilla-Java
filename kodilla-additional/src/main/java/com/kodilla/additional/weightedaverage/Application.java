@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges.weightedaverage;
+package com.kodilla.additional.weightedaverage;
 
 import java.util.List;
 
@@ -15,6 +15,5 @@ public class Application {
         } catch (WeightedAverageException e) {
             System.out.println(e.getMessage());
         }
-
     }
 }

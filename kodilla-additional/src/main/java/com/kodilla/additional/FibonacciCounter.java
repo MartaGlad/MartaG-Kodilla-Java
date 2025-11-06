@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.additional;
 
 public class FibonacciCounter {
     public static long fibonacciIter(long n) {

@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges.weightedaverage;
+package com.kodilla.additional.weightedaverage;
 
 import java.util.List;
 import java.util.stream.IntStream;
