@@ -15,10 +15,16 @@ import java.util.List;
        """,
        resultClass = Company.class
 )
+
+@NamedQuery(
+        name = "Company.retrieveCompaniesByPartOfTheName",
+        query = "from Company where name like concat('%',:ARG,'%')"
+)
+
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
-
     private int id;
     private String name;
     private List<Employee> employees = new ArrayList<>();
@@ -44,7 +50,6 @@ public class Company {
         return name;
     }
 
-
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
@@ -60,5 +65,13 @@ public class Company {
 
     private void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "id=" + id +
+                ", name='" + name + '\'';
+
     }
 }

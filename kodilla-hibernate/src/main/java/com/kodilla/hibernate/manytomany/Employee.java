@@ -6,15 +6,20 @@ import jakarta.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.retrieveEmployeesWithLastname",
-        query = "from Employee where lastName = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesWithLastname",
+                query = "from Employee where lastName = :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesByPartOfTheName",
+                query = "from Employee where firstName like concat('%',:ARG,'%') or lastName like concat('%',:ARG,'%')"
+        )
+})
 
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
-
     private int id;
     private String firstName;
     private String lastName;
@@ -71,5 +76,14 @@ public class Employee {
 
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
