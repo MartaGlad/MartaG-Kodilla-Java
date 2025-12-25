@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.kodilla'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation("org.seleniumhq.selenium:selenium-java:4.39.0")
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+}
+
+application {
+    mainClass = 'com.kodilla.testing2.google.GoogleTestingApp'
+}
+
+test {
+    useJUnitPlatform()
+}
