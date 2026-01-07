@@ -26,8 +26,8 @@ public class CrudAppTestingApp {
         WebElement textareaField = driver.findElement(By.xpath(XPATH_TEXTAREA));
         textareaField.sendKeys("New robotic content");
 
-       while(!driver.findElement(By.xpath(XPATH_WAIT_FOR)).isDisplayed());
-        WebElement selectCombo = driver.findElement(By.xpath(XPATH_SELECT));
+       while(!driver.findElement(By.xpath(XPATH_WAIT_FOR)).isDisplayed());//oczekiwanie, aż załadują się dane "dociągane" przy pomocy technologii AJAX
+       WebElement selectCombo = driver.findElement(By.xpath(XPATH_SELECT));
 
         /*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement selectCombo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(XPATH_SELECT))); */

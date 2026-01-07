@@ -1,4 +1,4 @@
-package com.kodilla.additional.bubbleSort;
+package com.kodilla.additional.bubblesort;
 
 import java.util.LinkedList;
 import java.util.List;

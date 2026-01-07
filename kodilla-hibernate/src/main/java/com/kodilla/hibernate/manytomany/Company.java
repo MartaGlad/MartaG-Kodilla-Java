@@ -7,16 +7,16 @@ import jakarta.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
+@NamedNativeQuery (
        name = "Company.retrieveCompaniesNameStartsWith",
        query = """
        Select * from COMPANIES 
-       where substring(COMPANY_NAME, 1, 3) = :NAME_STARTS_WITH
+       where substring (COMPANY_NAME, 1, 3) = :NAME_STARTS_WITH
        """,
        resultClass = Company.class
 )
 
-@NamedQuery(
+@NamedQuery (
         name = "Company.retrieveCompaniesByPartOfTheName",
         query = "from Company where name like concat('%',:ARG,'%')"
 )

@@ -11,7 +11,7 @@ public class MedianAdaptee implements BookStatistics { //interfejs systemu wywo�
 
     @Override
     public int averagePublicationYear(Map<BookSignature, Book> books) {
-        Statistics statistics = new Statistics(); //Satatistics ma też zaimplementowany ten interfejs
+        Statistics statistics = new Statistics(); //Statistics ma też zaimplementowany ten interfejs
         return statistics.averagePublicationYear(books);
     }
 

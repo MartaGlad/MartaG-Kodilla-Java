@@ -6,12 +6,12 @@ import jakarta.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQueries({
-        @NamedQuery(
+@NamedQueries ({
+        @NamedQuery (
                 name = "Employee.retrieveEmployeesWithLastname",
                 query = "from Employee where lastName = :LASTNAME"
         ),
-        @NamedQuery(
+        @NamedQuery (
                 name = "Employee.retrieveEmployeesByPartOfTheName",
                 query = "from Employee where firstName like concat('%',:ARG,'%') or lastName like concat('%',:ARG,'%')"
         )
@@ -55,8 +55,8 @@ public class Employee {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "JOIN_COMPANY_EMPLOYEE",
-            joinColumns = {@JoinColumn(name= "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},
-            inverseJoinColumns = {@JoinColumn(name ="COMPANY_ID", referencedColumnName = "COMPANY_ID") }
+            joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "COMPANY_ID", referencedColumnName = "COMPANY_ID") }
     )
     public List<Company> getCompanies() {
         return companies;
